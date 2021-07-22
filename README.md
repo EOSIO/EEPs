@@ -1,5 +1,5 @@
-# EEPs [![Telegram](https://t.me/eos_enhancements_proposals)]
-EOS Enchancement Proposals (EEPs) describe standards for the EOSIO platform, including core protocol specifications, client APIs, and contract standards.
+# EEPs
+EOSIO Enchancement Proposals (EEPs) describe standards for the EOSIO platform, including core protocol specifications, client APIs, and contract standards.
 
 # Contributing
 
@@ -27,3 +27,6 @@ When you believe your EEP is mature and ready to progress past the draft phase, 
 * **Deferred** - the EEP has been put off for future consideration
 * **Living** - this is similar to Final, but denotes an EEP which requires regular updates for accuracy (good for token/wallet standards)
 * **Archived** - the EEP is no longer under consideration (withdrawn by author, not enough support for the proposal, etc)
+
+# Telegram
+If you are interested in discussing proposal ideas, providing feedback on existing proposals or the EEPs process, or want to get more involved, join the EEPs telegram group. [[EOSIO Enhancements Proposals Telegram](https://t.me/eos_enhancements_proposals)]
