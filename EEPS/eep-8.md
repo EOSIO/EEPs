@@ -94,120 +94,146 @@ maximum_supply: `asset` setting the maximum supply of the token
 
 #### issue
 Amount of tokens that will be issued to an account.
+
 ##### required authorizer
-issuer used when the token was created.
-parameters
-to: name of the account who can issue the token.
-quantity: asset amount of the tokens that will be issued.
-memo: string of characters describing the issuance.
+`issuer` used when the token was created.
+
+##### parameters
+to: `name` of the account who can issue the token.
+quantity: `asset` amount of the tokens that will be issued.
+memo: `string` of characters describing the issuance.
+
 ##### prerequisites
-The memo is less than 256 bytes.
-The quantity symbol was created prior to issue being called.
-to is the issuer used in the create call.
-quantity must be positive and less than the maximum_supply - current_supply
+- The `memo` is less than 256 bytes.
+- The `quantity` `symbol` was created prior to `issue` being called.
+- `to` is the `issuer` used in the create call.
+- `quantity` must be positive and less than the `maximum_supply` - `current_supply`
+
 ##### postcondition
-accounts table must have a scope of to and a primary key of quantity.symbol
-balance must increase by exactly quantity for scope of to and primary key of quantity.symbol
-current_supply in stat must increase by exactly quantity
+- `accounts` table must have a scope of to and a primary key of `quantity.symbol`
+- `balance` must increase by exactly `quantity` for scope of to and primary key of `quantity.symbol`
+- `current_supply` in stat must increase by exactly `quantity`
 
 #### open
 Open a zero balance token account for owner  with ram_payer paying for the RAM. Must be a no-op if the accounts table row already exists for this owner and symbol.
+
 ##### required authorizer
-ram_payer
-parameters
-owner: 	name of the account to hold the zero balance.
-symbol:	symbol of the token to open a token account.
-ram_payer: 	name of the account paying for the RAM.
+`ram_payer`
+
+##### parameters
+owner: 	`name` of the account to hold the zero balance.
+symbol:	`symbol` of the token to open a token account.
+ram_payer: 	`name` of the account paying for the RAM.
+
 ##### prerequisites
-ram_payer has enough RAM.
-The owner account exists.
-The symbol was created prior to open being called.
+- `ram_payer` has enough RAM.
+- The `owner` account exists.
+- The `symbol` was created prior to `open` being called.
 ##### postcondition
-accounts table must have a scope of to and a primary key of quantity.symbol
-ram_payer must be payer for the row created in accounts with a scope of symbol and primary key of owner
-quantity must be 0 with correct symbol if no row existed in accounts with a scope of symbol and primary key of owner prior to this action
+- `accounts` table must have a scope of to and a primary key of `quantity.symbol`
+- `ram_payer` must be payer for the row created in `accounts` with a scope of `symbol` and primary key of `owner`
+- `quantity` must be 0 with correct `symbol` if no row existed in `accounts` with a scope of `symbol` and primary key of `owner` prior to this action
 
 
 #### retire
 Remove quantity from the current supply.
+
 ##### required authorizer
-issuer of the token.
-parameters
-quantity:	asset to remove from circulation.
-memo:		string describing the transaction.
+`issuer` of the token.
+
+##### parameters
+quantity:	`asset` to remove from circulation.
+memo:		`string` describing the transaction.
+
 ##### prerequisites
-asset.symbol exists.
-supply - quantity is greater or equal to 0.
-memo is less than 256 bytes.
+- `asset.symbol` exists.
+- `supply` - `quantity` is greater or equal to 0.
+- `memo` is less than 256 bytes.
+
 ##### postconditions
-The row of accounts with a scope issuer and primary key of quantity.symbol balance column must decrease by exactly quantity
-stat column current_supply must decrease by exactly quantity
+- The row of `accounts` with a scope `issuer` and primary key of `quantity.symbol` balance column must decrease by exactly `quantity`
+- `stat` column `current_supply` must decrease by exactly `quantity`
 
 #### transfer
-Send tokens from the from account to the to account.
+Send tokens from the `from` account to the `to` account.
+
 ##### required authorizer
-from account
-parameters
-from		name of the account sending the tokens.
-to		name of the account receiving the tokens.
-quantity	asset amount to send.
-memo		string describing the transfer.
+`from` account
+
+##### parameters
+from		`name` of the account sending the tokens.
+to			`name` of the account receiving the tokens.
+quantity	`asset` amount to send.
+memo		`string` describing the transfer.
+
 ##### prerequisites
-The to account  exists and is not equal to from.
-quantity is positive and is a valid quantity.
-memo is less than 256 bytes.
-from liquid balance is greater than quantity.
+- The `to` account  exists and is not equal to `from`.
+- `quantity` is positive and is a valid `quantity`.
+- `memo` is less than 256 bytes.
+- `from` liquid balance is greater than `quantity`.
 ##### postconditions
-The row of accounts with a scope from and primary key of quantity.symbol balance column must decrease by exactly quantity
-The row of accounts with a scope to and primary key of quantity.symbol balance column must increase by exactly quantity
-from account is notified of transfer using require_recipient
-to account is notified of transfer using require_recipient
+- The row of `accounts` with a scope `from` and primary key of `quantity.symbol` `balance` column must decrease by exactly `quantity`
+- The row of `accounts` with a scope `to` and primary key of `quantity.symbol` `balance` column must increase by exactly `quantity`
+- `from` account is notified of transfer using `require_recipient`
+- `to` account is notified of transfer using `require_recipient`
 
 #### transferfee (optional)
-Send tokens from the from account to the to account.
+Send tokens from the `from` account to the `to` account.
+
 ##### required authorizer
-from account
-parameters
-from		name of the account sending the tokens.
-to		name of the account receiving the tokens.
-quantity	asset amount to send.
-fee		asset amount to pay as a fee to an account defined by the contract.
-memo		string describing the transfer.
+`from` account
+
+##### parameters
+from		`name` of the account sending the tokens.
+to			`name` of the account receiving the tokens.
+quantity	`asset` amount to send.
+fee			`asset` amount to pay as a fee to an account defined by the contract.
+memo		`string` describing the transfer.
+
 ##### prerequisites
-The to account  exists and is not equal to from.
-quantity is positive and is a valid quantity.
-memo is less than 256 bytes.
-from liquid balance is greater than fee plus quantity.
+- The `to` account exists and is not equal to `from`.
+- `quantity` is positive and is a valid `quantity`.
+- `memo` is less than 256 bytes.
+- `from` liquid balance is greater than `fee` plus `quantity`.
+
 ##### postconditions
-The row of accounts with a scope from and primary key of quantity.symbol balance column must decrease by exactly quantity + fee
-The row of accounts with a scope to and primary key of quantity.symbol balance column must increase by exactly quantity
-The row of accounts with a scope issuer and primary key of quantity.symbol balance column must increase by exactly fee
-from account is notified of transfer using require_recipient
-to account is notified of transfer using require_recipient
+- The row of `accounts` with a scope `from` and primary key of `quantity.symbol` `balance` column must decrease by exactly `quantity` + `fee`
+- The row of `accounts` with a scope `to` and primary key of `quantity.symbol` `balance` column must increase by exactly `quantity`
+- The row of `accounts` with a scope `issuer` and primary key of `quantity.symbol` `balance` column must increase by exactly `fee`
+- `from` account is notified of `transfer` using `require_recipient`
+- `to` account is notified of `transfer` using `require_recipient`
 
 #### API
 This section contains pseudo code describing what an API could look like. 
-Get Account Balance
+##### Get Account Balance
 reference
 https://developers.eos.io/manuals/eos/latest/nodeos/plugins/chain_api_plugin/api-reference/index#operation/get_table_rows 
-function 
+###### function 
 asset getBalance( name code, name account_name, symbol sym ) {
 	return get_table_rows( code, “accounts”, account_name, lower_bound=sym, limit=1 ).rows[0].balance
 }
-Get Supply Information
-reference
+##### Get Supply Information
+###### reference
 https://developers.eos.io/manuals/eos/latest/nodeos/plugins/chain_api_plugin/api-reference/index#operation/get_table_rows
-function
+
+###### function
+```
 asset getSupply( name code, symbol sym ) {
 	return get_table_rows( code, sym, stat, limt=1 ).rows[0].supply
 }
-Get Total Supply Information
-reference
+```
+
+##### Get Total Supply Information
+
+###### reference
 https://developers.eos.io/manuals/eos/latest/nodeos/plugins/chain_api_plugin/api-reference/index#operation/get_table_rows
-function
+
+###### function
+```
 asset getTotalSupply( name code, symbol sym ) {
 	return get_table_rows( code, sym, stat, limit=1 ).rows[0].max_supply
 }
+```
 
 ## Backwards Compatibility
 
@@ -217,4 +243,4 @@ N/A
 
 # Implementation
 
-Sample Contract (https://github.com/EOSIO/eosio.contracts/tree/master/contracts/eosio.token)
+[Sample Contract](https://github.com/EOSIO/eosio.token/tree/main/contracts/eosio.token)
