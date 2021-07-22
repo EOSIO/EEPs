@@ -3,8 +3,8 @@ EEP: 1
 title: EEP Purpose and Guidelines
 status: Active
 type: Meta
-author: EOS Canada Team
-created: 2018-10-10
+author: EOSIO
+created: 2021-07-22
 ---
 
 ## What is an EEP?
