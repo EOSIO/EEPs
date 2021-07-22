@@ -14,7 +14,7 @@ If your EEP requires images, the image files should be included in a subdirector
 
 Once your first PR is merged, we have a bot that helps out by automatically merging PRs to draft EEPs. For this to work, it has to be able to tell that you own the draft being edited. Make sure that the 'author' line of your EEP contains either your GitHub username or your email address within triangle brackets (ex: < exmaple@email.com >). If you use your email address, that address must be the one publicly shown on [your GitHub profile](https://github.com/settings/profile).
 
-When you believe your EEP is mature and ready to progress past the draft phase, you should open a PR changing the state of your EEP to 'Submitted'. An editor will review your draft, mark it 'Ready for Review', and set an ad-hoc meeting to discuss the proposal. The discussions will determine how the proposal will flow through the EEPs lifecycle. If the editor decides there is no rough consensus - for instance, because contributors point out significant issues with the EEP - they may close the PR and request that you fix the issues in the draft before trying again.
+When you believe your EEP is mature and ready to progress past the draft phase, you should open a PR changing the state of your EEP to 'Submitted'. An editor will review your submission, mark it 'Ready for Review', and set an ad-hoc meeting to discuss the proposal. The discussions will determine how the proposal will flow through the EEPs lifecycle.
 
 # EEP Status Terms
 * **Draft** - the EEP is currently a work in progress and has not yet been submitted
