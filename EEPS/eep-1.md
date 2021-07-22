@@ -299,14 +299,14 @@ Trademarks: EOSIO, EOS, the heptahedron and associated logos and related marks a
   
 [EEP Telegram Channel](https://t.me/eos_enhancements_proposals)
   
-[pull request]: https://github.com/eoscanada/EEPs/pulls
+[pull request] https://github.com/eoscanada/EEPs/pulls
   
-[the Issues section of this repository]: https://github.com/eoscanada/EEPs/issues
+[the Issues section of this repository] https://github.com/eoscanada/EEPs/issues
   
-[markdown]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+[markdown] https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
   
-[Ethereum's EIP-1]: https://github.com/ethereum/EIPs/
+[Ethereum's EIP-1] https://github.com/ethereum/EIPs/
   
-[Bitcoin's BIP-0001]: https://github.com/bitcoin/bips
+[Bitcoin's BIP-0001] https://github.com/bitcoin/bips
   
-[Python's PEP-0001]: https://www.python.org/dev/peps/
+[Python's PEP-0001] https://www.python.org/dev/peps/
