@@ -245,6 +245,7 @@ Conduct
 While participating in this process, please be respectful and constructive, so that participation in our project is a positive experience for everyone.
 
 Examples of behavior that contributes to creating a positive environment include:
+  
 Using welcoming and inclusive language
 Being respectful of differing viewpoints and experiences
 Gracefully accepting constructive criticism
