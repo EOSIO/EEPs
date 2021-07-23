@@ -3,7 +3,7 @@ EEP: 1
 title: EEP Purpose and Guidelines
 status: Active
 type: Meta
-author: [EOSIO](eosio@block.one)
+author: EOSIO
 created: 2018-10-10
 updated: 2021-07-23
 ---
