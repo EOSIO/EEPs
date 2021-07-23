@@ -24,11 +24,11 @@ For EOSIO implementers, EEPs are a convenient way to track the progress of their
 
 Parties involved in the process are you (the champion or EEP author), the EEP editors, and the EEP reviewers.
 
-Role of an EEP champion or author
+### Role of an EEP champion or author
 
 The role of the champion is to write the EEP using the style and format described below, shepherd the discussions in the appropriate forums, and build community consensus around the idea.
 
-Role of an EEP editor
+### Role of an EEP editor
 
 For each new EEP that comes in, an editor does the following:
 
@@ -56,7 +56,7 @@ The current EEP editors are:
 * Sana Rauf
 * Amanda Clark
 
-Role of the EEP reviewers
+### Role of the EEP reviewers
 
 The EEP reviewers are responsible for reviewing EEP submissions and deciding next steps. Once an EEP has been submitted by an author and reviewed by an EEP editor, it is added to the agenda for the next review meeting.
 
