@@ -4,7 +4,8 @@ title: EEP Purpose and Guidelines
 status: Active
 type: Meta
 author: EOSIO
-created: 2021-06-08
+created: 2018-10-10
+updated: 2021-07-23
 ---
 
 ## What is an EEP?
