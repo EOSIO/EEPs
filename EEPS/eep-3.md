@@ -1,5 +1,5 @@
 ---
-EEP: 8
+EEP: 3
 title: Proposed EOS Token Standard
 author: Buddy Deck (@deckb)
 revision: 0
