@@ -72,124 +72,115 @@ EEP review meetings will be held ad-hoc at the beginning of the EEP launch and a
 In particular, the issues section of the EEPs repository is an excellent place to discuss your proposal with the community and start creating more formalized language around your EEP.
 
 #### Submit an EEP
+1. Navigate to EOSIO’s official [EEP repository](https://github.com/EOSIO/EEPs)
+2. Use a pull request to update the status. Please include a link to where people should continue discussing your EEP.
+3. The EEP editors will process these requests. Once you’ve submitted your EEP, the EEP will have a ‘Submitted’ status.
 
-Navigate to EOSIO’s official EEP repository
+#### EEP Review by an EEP Editor
+* An EEP editor will review the submitted EEP.
+* If the EEP is ready for review at the next EEP review meeting, the EEP editor will merge the EEP into the main repository.
+* If the editor has feedback, the EEP editor will correspond with the author until the EEP is ready for review.
+* Review new proposals at the EEP review meeting.
+* Once an EEP editor has approved an EEP submission into “Ready for Review” status, it is added to the agenda for the next EEP review meeting.
+* At the EEP review meeting, proposals are reviewed and discussed. There are four possible paths an EEP submission may take at the EEP review meeting:
+  * **Deferred:** the EEP submission presents a good idea for the future but cannot be accepted immediately; it will be revisited in the future
+  * **Accepted:** the EEP submission presents a good idea and can begin development immediately
+  * **Living:** the EEP requires regular updates and will be a living proposal
+  * **Archived:** either the author retracts their EEP submission or the EEP does not obtain the consensus it needs to be implemented
 
-Use a pull request to update the status. Please include a link to where people should continue discussing your EEP. The EEP editors will process these requests as per the conditions below.
-
-Once you’ve submitted your EEP, the EEP will have a ‘Submitted’ status.
-
-EEP Review by an EEP Editor
-An EEP editor will review the submitted EEP
-
-If the EEP is ready for review at the next EEP review meeting, the EEP editor will merge the EEP into the main repository 
-
-If the editor has feedback, the EEP editor will correspond with the author until the EEP is ready for review
-
-Review new proposals at the EEP review meeting
-
-Once an EEP editor has approved an EEP submission into “Ready for Review” status, it is added to the agenda for the next EEP review meeting
-
-At the EEP review meeting, proposals are reviewed and discussed. There are four possible paths an EEP submission may take at the EEP review meeting:
-
-Deferred: the EEP submission presents a good idea for the future but cannot be accepted immediately; it will be revisited in the future
-
-Accepted: the EEP submission presents a good idea and can begin development immediately
-
-Living: the EEP requires regular updates and will be a living proposal
-
-Archived: either the author retracts their EEP submission or the EEP does not obtain the consensus it needs to be implemented
-
-EEP Next Steps
-
+#### EEP Next Steps
 Based on the next steps decided at the EEP review meeting:
-If Deferred, the EEP will be revisited at a future meeting
-If Accepted, the EEP is now available for development
-If Living, the EEP will be regularly reviewed to ensure accuracy
-If Archived, the justification will be recorded and the EEP will no longer be pursued
+  * **If Deferred:** the EEP will be revisited at a future meeting
+  * **If Accepted:** the EEP is now available for development
+  * **If Living:** the EEP will be regularly reviewed to ensure accuracy
+  * **If Archived:** the justification will be recorded and the EEP will no longer be pursued
 
-EEP Happy Path
-Once an EEP is accepted, the proposal is available for development. Any interested entity may begin the implementation of the EEP
-Once an EEP has been developed, it will go under PR review
-Once the PR review has been completed and successfully passed, the EEP will be deployed and achieve a “Final” status
+#### EEP Happy Path
+1. An EOSIO community member submits an EEP proposal in the correct format and a "Submitted" status.
+2. An EEP editor reviews the submission, verifies it is ready for review, schedules time to discuss the EEP with EEP reviewers.
+3. EEP reviewers accept the EEP, making the proposal available for development. Any interested entity may begin the implementation of the EEP.
+4. Once an EEP has been developed, it will go under PR review.
+5. The EEP will pass the PR review and achieve a “Final” status.
 
-EEP Statuses
-Submitted: the first draft has been submitted by an EEP author
-Ready for Review: the EEP has been reviewed by an EEP editor and has been added to the agenda for the next EEP review meeting
-Accepted: the EEP was analyzed and discussed by the EEP reviewers and has the sufficient support for implementation
-Under Development: the EEP is currently under development
-Pending PR Review: the EEP implementation is currently being reviewed
-Final: the EEP has been successfully implemented and is now active
-Deferred: This is for core EEPs that have been put off for a future hard fork
-Living: This is similar to Final, but denotes an EEP which requires regular updates for accuracy (good for token/wallet standards)
-Archived: An EEP which that is no longer under consideration
+## EEP Statuses
+* **Draft** - the EEP is currently a work in progress and has not yet been submitted
+* **Submitted** - the final draft of the EEP has been subitted by the EEP author
+* **Ready for Review** - the EEP has been reviewed by an EEP editor and has been added to the agenda for the next EEP review meeting
+* **Accepted** - the EEP was analyzed and discussed by the EEP reviewers and has sufficient support for implementation
+* **Under Development** - the EEP is currently under developmnet
+* **Pending PR Review** -the EEP implementation is currently being reviewed for final acceptance
+* **Final** - the EEP has been successfully implemented and is now active
+* **Deferred** - the EEP has been shelved for future consideration
+* **Living** - this is similar to Final, but denotes an EEP which requires regular updates for accuracy (good for token/wallet standards)
+* **Archived** - the EEP is no longer under consideration (withdrawn by author, not enough support for the proposal, etc.)
 
 ## What belongs in a successful EEP?
 It is highly recommended that a single EEP contain a single key proposal or new idea. The more focused the EEP, the more successful it tends to be. A change to one client doesn’t require an EEP; a change that affects multiple clients, or defines a standard for multiple apps to use, does.
 
-An EEP must meet certain minimum criteria. It must be a clear and complete description of the proposed enhancement. The enhancement must represent a net improvement. The proposed implementation, if applicable, must be solid and must not complicate the protocol unduly.
-Each EEP should have the following parts:
-Preamble: RFC 822 style headers containing metadata about the EEP, including the EEP number, a short descriptive title (limited to a maximum of 44 characters), and the author details. See below for details.
-Simple Summary: “If you can’t explain it simply, you don’t understand it well enough.” Provide a simplified and layman-accessible explanation of the EEP.
-Abstract: a short (~200 word) description of the technical issue being addressed.
-Motivation (*optional): The motivation is critical for EEPs that want to change the EOSIO protocol. It should clearly explain why the existing protocol specification is inadequate to address the problem that the EEP solves. EEP submissions without sufficient motivation may be rejected outright.
-Specification: The technical specification should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations for any of the current EOSIO platforms (eos-go, eosjs)
-Rationale: The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.
-Backwards Compatibility: All EEPs that introduce backwards incompatibilities must include a section describing these incompatibilities and their severity. The EEP must explain how the author proposes to deal with these incompatibilities. EEP submissions without a sufficient backwards compatibility treatise may be rejected outright.
-Test Cases: Test cases for an implementation are mandatory for EEPs that are affecting consensus changes. Other EEPs can choose to include links to test cases if applicable.
-Implementations: The implementations must be completed before any EEP is given status “Final”, but it need not be completed before the EEP is merged as draft. While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of “rough consensus and running code” is still useful when it comes to resolving many discussions of API details.
-Security Considerations: Discuss the security implications/considerations relevant to the proposed change. Include information that might be important for security discussions, surface risks and can be used throughout the life cycle of the proposal.
-Intellectual Property: All EEPs submissions must contain the following text: “I hereby agree that this EEP is subject to this copyright waiver and I certify that I have all necessary rights and permissions to make this submission and to agree to such waiver.”
+#### An EEP must meet certain minimum criteria:
+* It must be a clear and complete description of the proposed enhancement.
+* The enhancement must represent a net improvement.
+* The proposed implementation, if applicable, must be solid and must not complicate the protocol unduly.
+* The proposal must be chain-agnostic.
+
+#### Each EEP should have the following parts:
+**Preamble:** RFC 822 style headers containing metadata about the EEP, including the EEP number, a short descriptive title (limited to a maximum of 44 characters), and the author details. See below for details.
+
+**Simple Summary:** “If you can’t explain it simply, you don’t understand it well enough.” Provide a simplified and layman-accessible explanation of the EEP.
+
+**Abstract:** a short (~200 word) description of the technical issue being addressed.
+
+**Motivation (*optional):** The motivation is critical for EEPs that want to change the EOSIO protocol. It should clearly explain why the existing protocol specification is inadequate to address the problem that the EEP solves. EEP submissions without sufficient motivation may be rejected outright.
+
+**Specification:** The technical specification should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations for any of the current EOSIO platforms (eos-go, eosjs).
+
+**Rationale:** The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.
+
+**Backwards Compatibility:** All EEPs that introduce backwards incompatibilities must include a section describing these incompatibilities and their severity. The EEP must explain how the author proposes to deal with these incompatibilities. EEP submissions without a sufficient backwards compatibility treatise may be rejected outright.
+
+**Test Cases:** Test cases for an implementation are mandatory for EEPs that are affecting consensus changes. Other EEPs can choose to include links to test cases if applicable.
+
+**Implementations:** The implementations must be completed before any EEP is given status “Final”, but it need not be completed before the EEP is merged as draft. While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of “rough consensus and running code” is still useful when it comes to resolving many discussions of API details.
+
+**Security Considerations:** Discuss the security implications/considerations relevant to the proposed change. Include information that might be important for security discussions, surface risks and can be used throughout the life cycle of the proposal.
+
+**Intellectual Property:** All EEPs submissions must contain the following text: “I hereby agree that this EEP is subject to this copyright waiver and I certify that I have all necessary rights and permissions to make this submission and to agree to such waiver.”
 
 ## EEP Types
-There are three types of EEP:
+There are three types of EEPs:
+1. A **Standard Track EEP** describes any change that affects most or all EOSIO implementations, such as a change to the network protocol, a change in block or transaction validity rules, proposed application standards/conventions, or any change or addition that affects the interoperability of applications using EOSIO. 
 
-- A **Standard Track EEP** describes any change that affects most or all EOSIO implementations, such as a change to the the network protocol, a change in block or transaction validity rules, proposed application standards/conventions, or any change or addition that affects the interoperability of applications using EOSIO. Furthermore Standard EEPs can be broken down into the following categories. Standards Track EEPs consist of three parts, a design document, implementation, and finally if warranted an update to the formal specification.
-
-  - **Core** - improvements requiring a consensus fork, as well as changes that are not necessarily consensus critical but may be relevant to Block Producer and EOSIO discussions 
-
-  - **Networking** - improvements around p2p protocol
-
-  - **Interface** - includes improvements around client API specifications and standards, and also certain language-level standards like contract ABIs. For contract ABIs, it aligns with the [eosio.contracts repo](https://github.com/EOSIO/eosio.contracts) and discussion should primarily occur in that repository before an EEP is submitted to the EEPs repository
+Furthermore Standard EEPs can be broken down into the following categories. Standards Track EEPs consist of three parts, a design document, implementation, and finally if warranted an update to the formal specification.
+  * **Core:** improvements requiring a consensus fork, as well as changes that are not necessarily consensus critical but may be relevant to Block Producer and EOSIO discussions 
+  * **Networking:** improvements around the p2p protocol
+  * **Interface:** includes improvements around client API specifications and standards, and also certain language-level standards like contract ABIs. For contract ABIs, it aligns with the [eosio.contracts repo](https://github.com/EOSIO/eosio.contracts) and discussion should primarily occur in that repository before an EEP is submitted to the EOSIO/EEPs repository
   
-- An **Informational EEP** describes an EOSIO design issue, or provides general guidelines or information to the EOSIO community, but does not propose a new feature. Informational EEPs do not necessarily represent EOSIO community consensus or a recommendation, so users and implementers are free to ignore Informational EEPs or follow their advice.
+2. An **Informational EEP** describes an EOSIO design issue, or provides general guidelines or information to the EOSIO community, but does not propose a new feature. Informational EEPs do not necessarily represent EOSIO community consensus or a recommendation, so users and implementers are free to ignore Informational EEPs or follow their advice.
 
-- A **Meta EEP** describes a process surrounding EOSIO or proposes a change to (or an event in) a process. Process EEPs are like Standard Track EEPs but apply to areas other than the EOSIO protocol itself. They may propose an implementation, but not to EOSIO's codebase; they often require community consensus; unlike Informational EEPs, they are more than recommendations, and users are typically not free to ignore them. Examples include procedures, guidelines, changes to the decision-making process, and changes to the tools or environment used in EOSIO development. Any meta-EEP is also considered a Process EEP.
+3. A **Meta EEP** describes a process surrounding EOSIO or proposes a change to (or an event in) a process. Process EEPs are like Standard Track EEPs but apply to areas other than the EOSIO protocol itself. They may propose an implementation, but not to EOSIO's codebase; they often require community consensus; unlike Informational EEPs, they are more than recommendations, and users are typically not free to ignore them. Examples include procedures, guidelines, changes to the decision-making process, and changes to the tools or environment used in EOSIO development. Any meta-EEP is also considered a Process EEP.
 
 ## EEP Formats and Templates
 
 EEPs should be written in [markdown] format.
-Image files should be included in a subdirectory of the `assets` folder for that EEP as follow: `assets/eep-X` (for eep **X**). When linking to an image in the EEP, use relative links such as `../assets/eep-X/image.png`.
 
-## EEP Header Preamble
+Image files should be included in a subdirectory of the `assets` folder for that EEP as follows: `assets/eep-X` (for eep **X**). When linking to an image in the EEP, use relative links such as `../assets/eep-X/image.png`.
+
+#### EEP Header Preamble
 
 Each EEP must begin with an RFC 822 style header preamble, preceded and followed by three hyphens (`---`). The headers must appear in the following order. Headers marked with "*" are optional and are described below. All other headers are required.
-
-` eep:` <EEP number> (this is determined by the EEP editor)
-
-` title:` <EEP title>
-
-` author:` <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s). Details are below.>
-
-` * discussions-to:` <url>
-
-` status:` <Draft | Last Call | Accepted | Final | Active | Deferred | Rejected | Superseded>
-
-`* review-period-end: YYYY-MM-DD
-
-` type: `<Standards Track (Core, Networking, Interface) | Informational | Meta>
-
-` * category:` <Core | Networking | Interface > 
-
-` created:` <date created on, in ISO 8601 (yyyy-mm-dd) format>
-
-` * requires:` <EEP number(s)>
-
-` * replaces:` <EEP number(s)>
-
-` * superseded-by:` <EEP number(s)>
-
-` * resolution:` <url>
+* `eep:` <EEP number> (this is determined by the EEP editor)
+* `title:` <EEP title> (a high-level title of the EEP)
+* `author:` <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s). Details are below.>
+* `* discussions-to:` <url>
+* `status:` <Draft | Submitted | Ready for Review | Accepted | Under Development | Pending PR Review | Final | Deferred | Living | Archived>
+* `* review-period-end:` YYYY-MM-DD
+* ` type:` <Standards Track (Core, Networking, Interface) | Informational | Meta>
+* ` * category:` <Core | Networking | Interface > 
+* ` created:` <date created on, in ISO 8601 (yyyy-mm-dd) format>
+* ` * requires:` <EEP number(s)>
+* ` * replaces:` <EEP number(s)>
+* ` * superseded-by:` <EEP number(s)>
+* ` * resolution:` <url>
 
 #### Author header
 
@@ -201,7 +192,7 @@ or
 
 Random J. User (@username)
 
-if the email address or GitHub username is included, and
+if the email address or GitHub username is included, or
 
 Random J. User
 
