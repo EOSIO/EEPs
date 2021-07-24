@@ -22,7 +22,7 @@ For EOSIO implementers, EEPs are a convenient way to track the progress of their
 
 ## EEP Roles & Responsibilities
 
-Parties involved in the process are you (the champion or EEP author), the EEP editors, and the EEP reviewers.
+Parties involved in the process are the champion or EEP author, the EEP editors, and the EEP reviewers.
 
 ### Role of an EEP champion or author
 
@@ -30,23 +30,18 @@ The role of the champion is to write the EEP using the style and format describe
 
 ### Role of an EEP editor
 
-For each new EEP that comes in, an editor does the following:
-
-Read the EEP to check if it is ready, sound, and complete. The ideas must make technical sense, even if they don’t seem likely to get to final status.
-
-The title should accurately describe the content.
-
-Check the EEP for language (spelling, grammar, sentence structure, etc.), markup (Github flavored Markdown), code style.
+#### For each new EEP that comes in, an editor does the following:
+* Reviews the EEP to check if it is ready, sound, and complete.
+* Verify the proposal makes technical sense, even if it does not seem likely to get to final status.
+* Verifies the title accurately describe the content.
+* Check the EEP for language (spelling, grammar, sentence structure, etc.), markup (Github flavored Markdown), code style.
 
 If the EEP isn’t ready, the editor will send it back to the author for revision, with specific instructions.
 
-Once the EEP is ready for the repository, the EEP editor will:
-
-Assign an EEP number (generally the PR number or, if preferred by the author, the Issue # if there was discussion in the Issues section of this repository about this EEP)
-
-Merge the corresponding pull request
-
-Send a message back to the EEP author with the next step.
+#### Once the EEP is ready for the repository, the EEP editor will:
+* Assign an EEP number (generally the PR number or, if preferred by the author, the Issue # if there was discussion in the Issues section of this repository about this EEP).
+* Merge the corresponding pull request.
+* Mark the EEP with a 'Ready for Review' status and schedule an ad-hoc EEP review meeting with the EEP author and EEP reviewers to discuss next steps
 
 Many EEPs are written and maintained by developers with write access to the EOSIO codebase. The EEP editors monitor EEP changes, and correct any structure, grammar, spelling, or markup mistakes we see.
 
@@ -60,19 +55,23 @@ The current EEP editors are:
 
 The EEP reviewers are responsible for reviewing EEP submissions and deciding next steps. Once an EEP has been submitted by an author and reviewed by an EEP editor, it is added to the agenda for the next review meeting.
 
-EEP reviews will be held ad-hoc at the beginning of the EEP launch and a regular cadence will be determined at a later date. The agenda and meeting details, minutes, and recording will be shared publicly (similar to Ethereum's approach). Anyone from the EOSIO community is welcome to participate and provide technical input and feedback on EEP submissions.
+EEP review meetings will be held ad-hoc at the beginning of the EEP launch and a regular cadence will be determined at a later date. The agenda and meeting details, minutes, and recording will be shared publicly (similar to Ethereum's approach) and facilitated by the EEP editors. Anyone from the EOSIO community is welcome to participate and provide technical input and feedback on EEP submissions.
 
 ## EEP Workflow
 
-Before Submitting An EEP
+#### Before Submitting An EEP
+* Vet your idea, this will save you time. Ask the EOSIO community first if an idea is original to avoid wasting time on something that will be rejected based on prior research (searching the Internet does not always do the trick).
+* It also helps to make sure the idea is applicable to the entire community and not just the author. Just because an idea sounds good to the author does not mean it will work for most people in most areas where EOSIO is used.
 
-Vet your idea, this will save you time. Ask the EOSIO community first if an idea is original to avoid wasting time on something that will be rejected based on prior research (searching the Internet does not always do the trick).
+#### Examples of appropriate public forums to gauge interest around your EEP include:
+* [the EOS subreddit](https://www.reddit.com/r/eos/)
+* [the issues section of the EEPs repository](https://github.com/EOSIO/EEPs/issues)
+* [the EEP Telegram Channel](https://t.me/eos_enhancements_proposals)
+* the specific mainnet Telegram channels for each EOSIO chain
 
-It also helps to make sure the idea is applicable to the entire community and not just the author. Just because an idea sounds good to the author does not mean it will work for most people in most areas where EOSIO is used.
+In particular, the issues section of the EEPs repository is an excellent place to discuss your proposal with the community and start creating more formalized language around your EEP.
 
-Examples of appropriate public forums to gauge interest around your EEP include: the EOS subreddit, the issues section of the EEPs repository, and the EEP Telegram Channel, or the specific mainnet Telegram channels for each EOSIO chain. In particular, the issues section of the EEPs repository is an excellent place to discuss your proposal with the community and start creating more formalized language around your EEP.
-
-Submit an EEP
+#### Submit an EEP
 
 Navigate to EOSIO’s official EEP repository
 
@@ -139,7 +138,7 @@ Rationale: The rationale fleshes out the specification by describing what motiva
 Backwards Compatibility: All EEPs that introduce backwards incompatibilities must include a section describing these incompatibilities and their severity. The EEP must explain how the author proposes to deal with these incompatibilities. EEP submissions without a sufficient backwards compatibility treatise may be rejected outright.
 Test Cases: Test cases for an implementation are mandatory for EEPs that are affecting consensus changes. Other EEPs can choose to include links to test cases if applicable.
 Implementations: The implementations must be completed before any EEP is given status “Final”, but it need not be completed before the EEP is merged as draft. While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of “rough consensus and running code” is still useful when it comes to resolving many discussions of API details.
-Security Considerations: Discuss the security implications/considerations relevant to the proposed change. Include information that might be important for security discussions, surfaces risks and can be used throughout the life cycle of the proposal.
+Security Considerations: Discuss the security implications/considerations relevant to the proposed change. Include information that might be important for security discussions, surface risks and can be used throughout the life cycle of the proposal.
 Intellectual Property: All EEPs submissions must contain the following text: “I hereby agree that this EEP is subject to this copyright waiver and I certify that I have all necessary rights and permissions to make this submission and to agree to such waiver.”
 
 ## EEP Types
