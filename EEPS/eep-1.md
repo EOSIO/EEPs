@@ -217,17 +217,17 @@ While an EEP is a draft, a `discussions-to` header will indicate the mailing lis
  * EOSIO mainnet Telegram channels
  * [Reddit r/eos](https://www.reddit.com/r/eos/)
  
-No discussions-to header is necessary if the EEP is being discussed privately with the author.
+No `discussions-to` header is necessary if the EEP is being discussed privately with the author.
 
-The type header specifies the type of EEP: Standards Track, Meta, or Informational. If the track is Standards please include the subcategory (core, networking, interface, or RFC). 
+The `type` header specifies the type of EEP: Standards Track, Meta, or Informational. If the track is Standards please include the subcategory (core, networking, interface, or RFC). 
 
-The category header specifies the EEP's category. This is required for standards-track EEPs only.
+The `category` header specifies the EEP's category. This is required for standards-track EEPs only.
 
-The created header records the date that the EEP was assigned a number. Both headers should be in yyyy-mm-dd format, e.g. 2001-08-14.
+The `created` header records the date that the EEP was assigned a number. Both headers should be in yyyy-mm-dd format, e.g. 2001-08-14.
 
-EEPs may have a requires header, indicating the EEP numbers that this EEP depends on.
+EEPs may have a `requires` header, indicating the EEP numbers that this EEP depends on.
 
-EEPs may also have a superseded-by header indicating that an EEP has been rendered obsolete by a later document; the value is the number of the EEP that replaces the current document. The newer EEP must have a Replaces header containing the number of the EEP that it rendered obsolete.
+EEPs may also have a `superseded-by` header indicating that an EEP has been rendered obsolete by a later document; the value is the number of the EEP that replaces the current document. The newer EEP must have a Replaces header containing the number of the EEP that it rendered obsolete.
 
 Headers that permit lists must separate elements with commas.
 
