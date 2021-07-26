@@ -166,41 +166,58 @@ EEPs should be written in [markdown] format.
 Image files should be included in a subdirectory of the `assets` folder for that EEP as follows: `assets/eep-X` (for eep **X**). When linking to an image in the EEP, use relative links such as `../assets/eep-X/image.png`.
 
 #### EEP Header Preamble
+Each EEP must begin with an RFC 822 style header preamble, preceded and followed by three hyphens (`---`). The headers must appear in the following order. Headers marked with an asterisk are optional and are described below.
 
-Each EEP must begin with an RFC 822 style header preamble, preceded and followed by three hyphens (`---`). The headers must appear in the following order. Headers marked with "*" are optional and are described below. All other headers are required.
-* `eep:` <EEP number> (this is determined by the EEP editor)
-* `title:` <EEP title> (a high-level title of the EEP)
-* `author:` <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s). Details are below.>
-* `* discussions-to:` <url>
-* `status:` <Draft | Submitted | Ready for Review | Accepted | Under Development | Pending PR Review | Final | Deferred | Living | Archived>
-* `* review-period-end:` YYYY-MM-DD
-* ` type:` <Standards Track (Core, Networking, Interface) | Informational | Meta>
-* ` * category:` <Core | Networking | Interface > 
-* ` created:` <date created on, in ISO 8601 (yyyy-mm-dd) format>
-* ` * requires:` <EEP number(s)>
-* ` * replaces:` <EEP number(s)>
-* ` * superseded-by:` <EEP number(s)>
-* ` * resolution:` <url>
+All other headers are required.
 
-#### Author header
+`eep:` <EEP number> (this is determined by the EEP editor)
 
-The author header optionally lists the names, email addresses or usernames of the authors/owners of the EEP. Those who prefer anonymity may use a username only, or a first name and a username. The format of the author header value must be:
+`title:` <EEP title> (a high-level title of the EEP)
 
-Random J. User &lt;address@dom.ain&gt;
+`author:` <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s). Details are below.>
 
-or
+`* discussions-to:` <add a link>
 
-Random J. User (@username)
+`status:` <Draft | Submitted | Ready for Review | Accepted | Under Development | Pending PR Review | Final | Deferred | Living | Archived>
 
-if the email address or GitHub username is included, or
+`* review-period-end:` YYYY-MM-DD
 
-Random J. User
+`type:` <Standards Track (Core, Networking, Interface) | Informational | Meta>
 
-if the email address is not given.
+`* category:` <Core | Networking | Interface > 
 
-Note: The resolution header is required for Standards Track EEPs only. It contains a URL that should point to an email message or other web resource where the pronouncement about the EEP is made.
+`created:` <date created on, in ISO 8601 (yyyy-mm-dd) format>
 
-While an EEP is a draft, a discussions-to header will indicate the mailing list or URL where the EEP is being discussed. As mentioned above, examples for places to discuss your EEP include [EEPs Channel on Telegram](https://t.me/eos_enhancements_proposals), an issue in this repo or in a fork of this repo, the [EOS Mainnet BPs Telegram Channel](https://t.me/joinchat/HbgyfEqlPd_HCo4R8EJsnw) (as well as other EOSIO mainnet channels) and [Reddit r/eos](https://www.reddit.com/r/eos/). No discussions-to header is necessary if the EEP is being discussed privately with the author.
+`* requires:` <EEP number(s)>
+
+`* replaces:` <EEP number(s)>
+
+`* superseded-by:` <EEP number(s)>
+
+`* resolution:` <add a link>
+
+#### Author Header
+ 
+The author header optionally lists the names, email addresses or usernames of the authors/owners of the EEP. Those who prefer anonymity may use a username only, or a first name and a username.
+
+The format of the author header value must be Random J. User &lt;address@dom.ain&gt;
+
+or Random J. User (@username) if the email address or GitHub username is included,
+ 
+or Random J. User if the email address is not given.
+
+#### Additional Header & Template Guidelines
+
+The resolution header is required for Standards Track EEPs only. It contains a URL that should point to an email message or other web resource where the pronouncement about the EEP is made.
+
+While an EEP is a draft, a `discussions-to` header will indicate the mailing list or URL where the EEP is being discussed. As mentioned above, examples for places to discuss your EEP include:
+ * an issue in this repo or in a fork of this repo
+ * [EEPs Channel on Telegram](https://t.me/eos_enhancements_proposals)
+ * [EOS Mainnet BPs Telegram Channel](https://t.me/joinchat/HbgyfEqlPd_HCo4R8EJsnw)
+ * EOSIO mainnet Telegram channels
+ * [Reddit r/eos](https://www.reddit.com/r/eos/)
+ 
+No discussions-to header is necessary if the EEP is being discussed privately with the author.
 
 The type header specifies the type of EEP: Standards Track, Meta, or Informational. If the track is Standards please include the subcategory (core, networking, interface, or RFC). 
 
@@ -214,90 +231,87 @@ EEPs may also have a superseded-by header indicating that an EEP has been render
 
 Headers that permit lists must separate elements with commas.
 
-## Auxiliary Files
+#### Auxiliary Files
 
 EEPs may include auxiliary files such as diagrams. Such files must be named EEP-XXXX-Y.ext, where “XXXX” is the EEP number, “Y” is a serial number (starting at 1), and “ext” is replaced by the actual file extension (e.g. “png”).
 
 ## Transferring EEP Ownership
 
-It occasionally becomes necessary to transfer ownership of EEPs to a new champion. In general, we’d like to retain the original author as a co-author of the transferred EEP, but that’s not always possible or may not be the preference of the original author. A good reason to transfer ownership is because the original author no longer has the time or interest in updating it or following through with the EEP process, or has fallen off the face of the ‘net (i.e. is unreachable or isn’t responding to email). A bad reason to transfer ownership is because you don’t agree with the direction of the EEP. We try to build consensus around an EEP, but if that’s not possible, you can always submit a competing EEP.
+It occasionally becomes necessary to transfer ownership of EEPs to a new champion. In general, we’d like to retain the original author as a co-author of the transferred EEP, but that’s not always possible or may not be the preference of the original author. A good reason to transfer ownership is because the original author no longer has the time or interest in updating it or following through with the EEP process, or has fallen off the face of the net (i.e. is unreachable or isn’t responding to email). A bad reason to transfer ownership is because you don’t agree with the direction of the EEP. We try to build consensus around an EEP, but if that’s not possible, you can always submit a competing EEP.
 
 If you are interested in assuming ownership of an EEP, send a message asking to take over, addressed to both the original author and the EEP editor. If the original author doesn’t respond to email in a timely manner, the EEP editor will make a unilateral decision (it’s not like such decisions can’t be reversed).
 
 ## History
 
-This document was derived heavily from [Ethereum’s EIP-1] written by Martin Becze, Hudson Jameson, and others, which was derived from [Bitcoin’s BIP-0001] written by Amir Taaki which in turn was derived from [Python’s PEP-0001]. In many places text was simply copied and modified. Although the PEP-0001 text was written by Barry Warsaw, Jeremy Hylton, and David Goodger, they are not responsible for its use in the EOSIO Enhancement Process, and should not be bothered with technical questions specific to EOSIO or the EEP. Please direct all comments to the EEP editors.
+This document was derived heavily from [Ethereum’s EIP-1] written by Martin Becze, Hudson Jameson, and others, which was derived from [Bitcoin’s BIP-0001] written by Amir Taaki which in turn was derived from [Python’s PEP-0001]. In many places text was simply copied and modified. Although the PEP-0001 text was written by Barry Warsaw, Jeremy Hylton, and David Goodger, they are not responsible for its use in the EOSIO Enhancement Proposal process, and should not be bothered with technical questions specific to EOSIO or EEPs. Please direct all comments, questions, and feedback to the EEP editors.
 
 ## Legal
 
-By participating in the EEP process you agree to terms set forth in this document. If you do not agree to these terms, you may not participate in the EEP process.
+By participating in the EEP process you agree to terms set forth in this document. If you do not agree to these terms, you may not participate in the EEPs process.
 
-Conduct
+#### Conduct
 While participating in this process, please be respectful and constructive, so that participation in our project is a positive experience for everyone.
 
-Examples of behavior that contributes to creating a positive environment include:
-Using welcoming and inclusive language
-Being respectful of differing viewpoints and experiences
-Gracefully accepting constructive criticism
-Focusing on what is best for the community
-Showing empathy towards other community members
+##### Examples of behavior that contributes to creating a positive environment include:
+* Using welcoming and inclusive language
+* Being respectful of differing viewpoints and experiences
+* Gracefully accepting constructive criticism
+* Focusing on what is best for the community
+* Showing empathy towards other community members
 
-Examples of unacceptable behavior include:
-The use of sexualized language or imagery and unwelcome sexual attention or advances
-Trolling, insulting/derogatory comments, and personal or political attacks
-Public or private harassment
-Publishing others’ private information, such as a physical or electronic address, without explicit permission
-Other conduct which could reasonably be considered inappropriate in a professional setting
+##### Examples of unacceptable behavior include:
+* The use of sexualized language or imagery and unwelcome sexual attention or advances
+* Trolling, insulting/derogatory comments, and personal or political attacks
+* Public or private harassment
+* Publishing others’ private information, such as a physical or electronic address, without explicit permission
+* Other conduct which could reasonably be considered inappropriate in a professional setting
 
-Confidentiality: All EEPs, editor feedback on EEPs and EEPs reivew meeting discussions or feedback on EEPs are considered non-confidential information and may be disclosed to third parties.  This could lead to a third party developing an idea, concept, design or standard described in your EEP without your permission or involvement.
-Additional Requirements
+#### Confidentiality
+All EEPs, editor feedback on EEPs, and EEPs reivew meeting discussions or feedback on EEPs are considered non-confidential information and may be disclosed to third parties. This could lead to a third party developing an idea, concept, design or standard described in your EEP without your permission or involvement.
+
+#### Additional Requirements
   
-By participating in the EEP process, you certify that:
-You are not, are not acting on behalf of another party that is, and no party with a beneficial interest in you is: 
-subject to sanctions administered or enforced by any country or government or otherwise designated on any list of prohibited or restricted parties (including but not limited to the lists maintained by the United Nations Security Council, the U.S. Government, the European Union or its Member States, or other applicable government authority)(“Sanctions”); or
-organized or resident in a country or territory that is the subject of country-wide or territory-wide Sanctions
-And you acknowledge and agree that:
+##### By participating in the EEP process, you certify that:
+You are not, are not acting on behalf of another party that is, and no party with a beneficial interest in you is: subject to sanctions administered or enforced by any country or government or otherwise designated on any list of prohibited or restricted parties (including but not limited to the lists maintained by the United Nations Security Council, the U.S. Government, the European Union or its Member States, or other applicable government authority)(“Sanctions”); or
+organized or resident in a country or territory that is the subject of country-wide or territory-wide Sanctions.
 
-All EEPs, editor feedback on EEPs and EEP review meeting discussions or written feedback on EEPs are subject to this copyright waiver.
-
-The EEP process does not create an obligation to consider, develop or implement any idea, design, concept or standard that you include in an EEP
+##### And you acknowledge and agree that:
+ * All EEPs, editor feedback on EEPs and EEP review meeting discussions or written feedback on EEPs are subject to this copyright waiver.
+ * The EEP process does not create an obligation to consider, develop or implement any idea, design, concept or standard that you include in an EEP
 
 The EEP process, including but not limited to EEP editing and EEP reviewer feedback is provided without warranty, guarantee or undertaking of any kind, whether express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. 
-
   
 In no event shall an EEP editor, an EEP reviewer or Bullish Global or its affiliates (“EEP Participants”) be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the EEP process and you waive any claim that you may have against such parties related to their participation in the EEP process 
 
-  
 You will not make EEP materials available to any person or entity that is the subject of Sanctions or organized or resident in a country or territory that is the subject of country-wide or territory-wide Sanctions.  You will comply with all applicable import, re-import, sanctions, anti-boycott, export, and re-export control laws and regulations.  If this is not accurate or you do not agree, then you must immediately cease accessing the EEP materials and delete all copies thereof.
 
 Any reference to any third party or third-party product, resource or service is not an endorsement or recommendation by an EEP Participant. EEP Participants are not responsible for, and disclaim any and all responsibility and liability for, your use of or reliance on any of these resources.
 
-Forward Looking Statements
+#### Forward Looking Statements
 
 When an EEP Participant makes statements expressing its vision, it does not guarantee anything, and all aspects of its vision are subject to change at any time and at such participant’s sole discretion, with or without notice. We call these “forward-looking statements”, which includes statements on an EEP Participant’s website and in other materials, such as statements regarding EOSIO’s development, expected performance, and future features, or business strategy, plans, prospects, developments and objectives. These statements are based on assumptions and are subject to risk, uncertainties and change at any time.
 
 EEP Participants operate in a rapidly changing environment and new risks emerge from time to time. Given these risks and uncertainties, you are cautioned not to rely on these forward-looking statements. Actual results, performance or events may differ materially from what is predicted in the forward-looking statements. Some of the factors that could cause actual results, performance or events to differ materially from the forward looking statements include, without limitation: technical feasibility and barriers; market trends and volatility; continued availability of capital, financing and personnel; product acceptance; the commercial success of any new products or technologies; competition; government regulation and laws; and general economic, market or business conditions.
 
-  
 All statements are valid only as of the date of first posting and EEP Participants are not under and expressly disclaim any obligation to update or alter any statements, whether as a result of new information, subsequent events or otherwise. Nothing provided in the EEP process constitutes technological, financial, investment, legal or other advice, either in general or with regard to any particular situation or implementation. Please consult with experts in appropriate areas before implementing or utilizing any content, guidance or feedback received as part of the EEP process.
 Trademarks: EOSIO, EOS, the heptahedron and associated logos and related marks are Bullish Global’s trademarks.
 
 ## Bibliography
 
-[eosio.contracts](https://github.com/EOSIO/eosio.contracts)
+* [eosio.contracts](https://github.com/EOSIO/eosio.contracts)
   
-[the EOS subreddit](https://www.reddit.com/r/eos/)
+* [the EOS subreddit](https://www.reddit.com/r/eos/)
   
-[EEP Telegram Channel](https://t.me/eos_enhancements_proposals)
+* [EEP Telegram Channel](https://t.me/eos_enhancements_proposals)
   
-[pull request](https://github.com/eoscanada/EEPs/pulls)
+* [pull request](https://github.com/eoscanada/EEPs/pulls)
   
-[the Issues section of this repository](https://github.com/eoscanada/EEPs/issues)
+* [the Issues section of this repository](https://github.com/eoscanada/EEPs/issues)
   
-[markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+* [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
   
-[Ethereum's EIP-1](https://github.com/ethereum/EIPs/)
+* [Ethereum's EIP-1](https://github.com/ethereum/EIPs/)
   
-[Bitcoin's BIP-0001](https://github.com/bitcoin/bips)
+* [Bitcoin's BIP-0001](https://github.com/bitcoin/bips)
   
-[Python's PEP-0001](https://www.python.org/dev/peps/)
+* [Python's PEP-0001](https://www.python.org/dev/peps/)
