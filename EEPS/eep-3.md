@@ -1,6 +1,6 @@
 ---
 EEP: 3
-title: Proposed EOS Token Standard
+title: Proposed EOSIO Token Standard
 author: Buddy Deck (@deckb)
 revision: 0
 status: Draft
@@ -19,7 +19,7 @@ There are many ways to design and implement a token contract. This token standar
 
 ## Motivation
 
-The first iteration of this standard mirrors the currently implemented eosio.token contract. It will serve as a first step in defining a standard for tokens on EOS and possibly other EOSIO chains. This standard will allow common APIs to be developed to query token contracts and enable validation checks on contracts to ensure a contract meets the standard. This proposal is meant to start a conversation between community members and is expected to be iterated on based on those conversations.
+The first iteration of this standard mirrors the currently implemented eosio.token contract. It will serve as a first step in defining a standard for tokens on EOSIO based chains. This standard will allow common APIs to be developed to query token contracts and enable validation checks on contracts to ensure a contract meets the standard. This proposal is meant to start a conversation between community members and is expected to be iterated on based on those conversations.
 
 ## Proposed Specification
 
@@ -244,3 +244,6 @@ N/A
 # Implementation
 
 [Sample Contract](https://github.com/EOSIO/eosio.token/tree/main/contracts/eosio.token)
+
+## Intellectual Property
+I hereby agree that this EEP is subject to this copyright waiver and I certify that I have all necessary rights and permissions to make this submission and to agree to such waiver.
