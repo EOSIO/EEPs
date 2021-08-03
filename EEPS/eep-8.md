@@ -27,4 +27,4 @@ The motivation comes from the experience we gained during the development of a h
 
 ## Specification
 
-I leave a more precise specification to the B1 team or other developers. 
+I leave a more precise specification to the B1 team or other developers with more detailed insights into the implementation of the permission structure. 
