@@ -3,7 +3,7 @@ EEP: 1
 title: Time-Bound Permissions
 status: Draft
 type: Core
-author: cmadh
+author: Corvin Meyer auf der Heide <corvin@liquidstudios.io> <@cmadh>
 created: 2021-08-03
 updated: 2021-08-03
 ---
