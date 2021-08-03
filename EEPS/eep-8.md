@@ -1,5 +1,5 @@
 ---
-EEP: 1
+EEP: 8
 title: Time-Bound Permissions
 status: Draft
 type: Core
