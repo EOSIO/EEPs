@@ -2,7 +2,6 @@
 EEP: 7
 title: ESR (EOSIO Signing Request)
 author: Aaron Cox (@aaroncox), Johan Nordberg (@jnordberg)
-revision: 2
 status: Draft
 type: Standards Track
 category: Interface
