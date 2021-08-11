@@ -187,6 +187,8 @@ All other headers are required.
 `* category:` <Core | Networking | Interface > 
 
 `created:` <date created on, in ISO 8601 (yyyy-mm-dd) format>
+ 
+`* updated:` <date the eep was last updated on, in ISO 8601 (yyyy-mm-dd) format>
 
 `* requires:` <EEP number(s)>
 
