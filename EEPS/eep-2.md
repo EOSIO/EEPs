@@ -3,7 +3,7 @@ EEP: 2
 title: Linking Accounts to Web Properties
 author: Josh Kauffman <josh@eoscanada.com>, Alexandre Bourget <alex@eoscanada.com>, Marc-Antoine Ross <marc@eoscanada.com>, Stephane Duschesneau <stephane@eoscanada.com>, Matthieu Vachon <matthieu.vachon@eoscanada.com>
 status: Draft
-type: RFC
+type: Standard
 category: N/A
 created: 2018-10-10
 ---
