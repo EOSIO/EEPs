@@ -2,10 +2,9 @@
 EEP: 3
 title: Proposed EOSIO Token Standard
 author: Buddy Deck (@deckb)
-revision: 0
 status: Draft
 type: Standard
-category: 
+category: Interface
 created: 2021-07-22
 ---
 
