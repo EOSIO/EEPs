@@ -5,7 +5,7 @@ status: Active
 type: Meta
 author: EOSIO
 created: 2018-10-10
-updated: 2021-07-23
+updated: 2021-08-11
 ---
 
 ## What is an EEP?
@@ -148,7 +148,7 @@ It is highly recommended that a single EEP contain a single key proposal or new 
 
 ## EEP Types
 There are three types of EEPs:
-1. A **Standard Track EEP** describes any change that affects most or all EOSIO implementations, such as a change to the network protocol, a change in block or transaction validity rules, proposed application standards/conventions, or any change or addition that affects the interoperability of applications using EOSIO. 
+1. A **Standard EEP** describes any change that affects most or all EOSIO implementations, such as a change to the network protocol, a change in block or transaction validity rules, proposed application standards/conventions, or any change or addition that affects the interoperability of applications using EOSIO. 
 
 Furthermore Standard EEPs can be broken down into the following categories. Standards Track EEPs consist of three parts, a design document, implementation, and finally if warranted an update to the formal specification.
   * **Core:** improvements requiring a consensus fork, as well as changes that are not necessarily consensus critical but may be relevant to Block Producer and EOSIO discussions 
@@ -182,9 +182,9 @@ All other headers are required.
 
 `* review-period-end:` YYYY-MM-DD
 
-`type:` <Standards Track (Core, Networking, Interface) | Informational | Meta>
+`type:` <Standard | Informational | Meta>
 
-`* category:` <Core | Networking | Interface > 
+`* category:` <Core | Networking | Interface | N/A> 
 
 `created:` <date created on, in ISO 8601 (yyyy-mm-dd) format>
  
