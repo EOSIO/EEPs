@@ -3,8 +3,8 @@ EEP: 5
 title: Silent alerting through on-chain permissions
 author: Alexandre Bourget <alex@eoscanada.com>
 status: Draft
-type: RFC
-category: N/A
+type: Standard
+category: Networking
 created: 2019-01-10
 ---
 
