@@ -1,10 +1,10 @@
 ---
 EEP: 8
 title: Time-Bound Permissions
+author: Corvin Meyer auf der Heide <corvin@liquidstudios.io> <@cmadh>
 status: Draft
 type: Standard
 category: Core
-author: Corvin Meyer auf der Heide <corvin@liquidstudios.io> <@cmadh>
 created: 2021-08-03
 ---
 
