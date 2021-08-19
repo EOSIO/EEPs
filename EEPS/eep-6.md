@@ -1,10 +1,10 @@
 ---
 EEP: 6
 title: EOS Mainnet Extension Chains
+author: Alexandre Bourget, Richard Reiner, Guillaume Babin, Mathieu Boulianne
 status: Draft
 type: Standard
 category: Networking
-author: Alexandre Bourget, Richard Reiner, Guillaume Babin, Mathieu Boulianne
 created: 2019-04-20
 ---
 
