@@ -1,9 +1,9 @@
 ---
-EEP: 4
+eep: 4
 title: Creating standard `type` for use with eosio.forum contract
 author: Josh Kauffman <josh@eoscanada.com>, Alexandre Bourget <alex@eoscanada.com>, Matthieu Vachon <matthieu.vachon@eoscanada.com>, Shaq Kheder <shaq@eostitan.com>
 status: Archived
-type: RFC
+type: N/A
 category: N/A
 created: 2018-11-22
 ---
