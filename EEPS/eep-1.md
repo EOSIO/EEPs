@@ -2,7 +2,7 @@
 EEP: 1
 title: EEP Purpose and Guidelines
 author: EOSIO
-status: Active
+status: Living
 type: Meta
 created: 2018-10-10
 updated: 2021-08-11
