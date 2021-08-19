@@ -147,7 +147,7 @@ It is highly recommended that a single EEP contain a single key proposal or new 
 **Intellectual Property:** All EEPs submissions must contain the following text: “I hereby agree that this EEP is subject to this copyright waiver and I certify that I have all necessary rights and permissions to make this submission and to agree to such waiver.”
 
 ## EEP Types
-There are three types of EEPs:
+There are four types of EEPs:
 1. A **Standard EEP** describes any change that affects most or all EOSIO implementations, such as a change to the network protocol, a change in block or transaction validity rules, proposed application standards/conventions, or any change or addition that affects the interoperability of applications using EOSIO. 
 
 Furthermore Standard EEPs can be broken down into the following categories. Standards Track EEPs consist of three parts, a design document, implementation, and finally if warranted an update to the formal specification.
@@ -158,6 +158,8 @@ Furthermore Standard EEPs can be broken down into the following categories. Stan
 2. An **Informational EEP** describes an EOSIO design issue, or provides general guidelines or information to the EOSIO community, but does not propose a new feature. Informational EEPs do not necessarily represent EOSIO community consensus or a recommendation, so users and implementers are free to ignore Informational EEPs or follow their advice.
 
 3. A **Meta EEP** describes a process surrounding EOSIO or proposes a change to (or an event in) a process. Process EEPs are like Standard Track EEPs but apply to areas other than the EOSIO protocol itself. They may propose an implementation, but not to EOSIO's codebase; they often require community consensus; unlike Informational EEPs, they are more than recommendations, and users are typically not free to ignore them. Examples include procedures, guidelines, changes to the decision-making process, and changes to the tools or environment used in EOSIO development. Any meta-EEP is also considered a Process EEP.
+
+4. An **Archived EEP** desribes a previously submitted EEP submission that does not have a type or category from the list above.
 
 ## EEP Formats and Templates
 
