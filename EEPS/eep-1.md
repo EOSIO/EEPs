@@ -182,7 +182,7 @@ All other headers are required.
 
 `* review-period-end:` YYYY-MM-DD
 
-`type:` <Standard | Informational | Meta>
+`type:` <Standard | Informational | Meta | N/A>
 
 `* category:` <Core | Networking | Interface | N/A> 
 
