@@ -144,7 +144,7 @@ It is highly recommended that a single EEP contain a single key proposal or new 
 
 **Security Considerations:** Discuss the security implications/considerations relevant to the proposed change. Include information that might be important for security discussions, surface risks and can be used throughout the life cycle of the proposal.
 
-**Intellectual Property:** All EEPs submissions must contain the following text: “I hereby agree that this EEP is subject to this copyright waiver and I certify that I have all necessary rights and permissions to make this submission and to agree to such waiver.”
+**Intellectual Property:** All EEPs submissions must contain the following text: “I hereby agree that this EEP is subject to this [copyright waiver](https://creativecommons.org/publicdomain/zero/1.0/) and I certify that I have all necessary rights and permissions to make this submission and to agree to such waiver.”
 
 ## EEP Types
 There are four types of EEPs:
@@ -280,7 +280,7 @@ You are not, are not acting on behalf of another party that is, and no party wit
 organized or resident in a country or territory that is the subject of country-wide or territory-wide Sanctions.
 
 ##### And you acknowledge and agree that:
- * All EEPs, editor feedback on EEPs and EEP review meeting discussions or written feedback on EEPs are subject to this copyright waiver.
+ * All EEPs, editor feedback on EEPs and EEP review meeting discussions or written feedback on EEPs are subject to this [copyright waiver](https://creativecommons.org/publicdomain/zero/1.0/).
  * The EEP process does not create an obligation to consider, develop or implement any idea, design, concept or standard that you include in an EEP
 
 The EEP process, including but not limited to EEP editing and EEP reviewer feedback is provided without warranty, guarantee or undertaking of any kind, whether express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. 
