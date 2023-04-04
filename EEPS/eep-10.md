@@ -1,6 +1,6 @@
 ---
 EEP: 10
-title: Smart Contract Function Interface of CMChain Digital Collection
+title: Smart Contract Function Interface of CMBaaS Digital Collection
 author: Siyuan Zhao <zhaosiyuan@chinamobile.com>, Luchun Yang <yangluchun@chinamobile.com>, Shengkun Zhou <zhoushengkun@chinamobile.com>, Lihui Cao <caolihui@chinamobile.com>, Jiayin Li <lijiayinit@chinamobile.com>, Mingjian Zhang <zhangmingjian@chinamobile.com>
 status: Draft
 type: Standard
