@@ -1,321 +1,159 @@
----
-EEP: 1
-title: EEP Purpose and Guidelines
-author: EOSIO
-status: Living
-type: Meta
-created: 2018-10-10
-updated: 2021-08-11
----
+Title
+===================
+SubQuery Expands Data Indexing Support to EOSIO
 
-## What is an EEP?
+Abstract
+--------------
 
-EEP stands for EOSIO Enhancement Proposal. An EEP is a design document providing information to the EOSIO community, or describing a new feature for EOSIO or its processes or environment. The EEP should provide a concise technical specification of the feature and a rationale for the feature. The EEP author is responsible for building consensus within the community and documenting dissenting opinions.
+Almost every blockchain has a need to process and query data, however everyone knows that a core weakness of blockchain data is that the processing and query performance is extremely inefficient. SubQuery is an open source platform that solves that and provides a more performant and feature-rich alternative to The Graph.
 
-This process is specifically for the EOSIO protocol. Proposals for EOS mainnet are out of scope for EEPs.
+SubQuery's mission is to make decentralised data more accessible. SubQuery is your own custom open-source API between blockchain data and your dApps and tools. Our indexer works on Ethereum, Polygon, BNB, Arbitrum, Optimism, Polkadot, Substrate, Avalanche, Cosmos, Near, Flare and Algorand chains, and then provides that data for developers to use for a wide array of projects (wallets, explorers, custom chains, or any other decentralised app).
 
-## EEP Rationale
+Simple Summary
+--------------
 
-We intend for EEPs to be the primary mechanism for proposing new features, for collecting community input on an issue, and for documenting the design decisions that have gone into EOSIO. Because EEPs are maintained as text files in a versioned repository, their revision history is the historical record of the feature proposal.
+We have three products:
 
-For EOSIO implementers, EEPs are a convenient way to track the progress of their implementation. Ideally each implementation maintainer would list the EEPs that they have implemented. This will give end users a convenient way to know the current status of a given implementation or library.
+-   An open source SDK, which includes the instructions on how any Indexer should traverse the blockchain, what data to collect, and how it should be shown to users. 
 
-## EEP Roles & Responsibilities
+-   A Managed Service, which provides enterprise level hosting (99.9% uptime) for SubQuery projects by our team (with a generous free tier)
 
-Parties involved in the process are the champion or EEP author, the EEP editors, and the EEP reviewers.
+-   A decentralised SubQuery Network. With the testnet just finished, we are about to launch a first version of the SubQuery Network. The SubQuery Network is our effort to move towards a decentralised and tokenised network in order to ensure no single point of failure and superior performance for SubQuery. It will support EOSIO from genesis and will encourage as many participants in the process as possible.
 
-### Role of an EEP champion or author
+In our view, the EOSIO ecosystem is poised for an extreme growth period and it requires tools such as SubQuery in order to thrive.
 
-The role of the champion is to write the EEP using the style and format described below, shepherd the discussions in the appropriate forums, and build community consensus around the idea.
+Motivation
+--------------
 
-### Role of an EEP editor
+What first brought our attention to EOSIO were customer requests asking for our indexing support for the EOS chain:\
+<https://github.com/subquery/subql/issues/1799>
+<https://github.com/subquery/subql/issues/1605>
 
-#### For each new EEP that comes in, an editor does the following:
-* Reviews the EEP to check if it is ready, sound, and complete.
-* Verify the proposal makes technical sense, even if it does not seem likely to get to final status.
-* Verifies the title accurately describe the content.
-* Check the EEP for language (spelling, grammar, sentence structure, etc.), markup (Github flavored Markdown), code style.
+Upon researching further we found we're in complete agreement with EOSIO's focus on providing a fast, efficient and highly configurable stack - SubQuery is designed to be a tool that supports this. Our goals have always been to build tools and services that accelerate the world's transition to web3 and EOSIO is a fascinating layer 1 that has attracted a large developer base.
 
-If the EEP isn’t ready, the editor will send it back to the author for revision, with specific instructions.
+SubQuery is an incredibly useful tool that developers can use to build dApps faster. It provides a critical level of infrastructure that developers need to access, organise, and utilise data efficiently. By supporting EOSIO, we will allow our existing customers to easily migrate over to EOSIO from other ecosystems by providing a common tool. We specialise in new layer-1 chains, and our customers generally take a cross chain approach to development.
 
-#### Once the EEP is ready for the repository, the EEP editor will:
-* Assign an EEP number (generally the PR number or, if preferred by the author, the Issue # if there was discussion in the Issues section of this repository about this EEP).
-* Merge the corresponding pull request.
-* Mark the EEP with a 'Ready for Review' status and schedule an ad-hoc EEP review meeting with the EEP author and EEP reviewers to discuss next steps
+How far along is our Project
+--------------
 
-Many EEPs are written and maintained by developers with write access to the EOSIO codebase. The EEP editors monitor EEP changes, and correct any structure, grammar, spelling, or markup mistakes we see.
+SubQuery is an established project launched early 2021. We've been building and scaling our tool to hundreds of customers across 11 different layer 1s (Ethereum, Polygon, BNB, Optimism, Arbitrum, Substrate/Polkadot, Avalanche, Cosmos, Near, Flare and Algorand) for some time now. We have a proven product with large customers across most verticals (wallets, deFi, NFTs, gameFi, explorers) etc. You can see some examples of projects using SubQuery in our [public explorer.](https://explorer.subquery.network/)
 
-The editors don’t pass judgment on EEPs. We merely do the administrative & editorial part.
+Competitive advantages?
+--------------
 
-The current EEP editors are:
-* Sana Rauf
-* Amanda Clark
+SubQuery is a flexible, cross-chain indexing service similar to the Graph. There are endless possibilities for the variety of data sources that can be analysed and served using SubQuery.
 
-### Role of the EEP reviewers
+We build SubQuery with the following key competitive advantages in mind:
 
-The EEP reviewers are responsible for reviewing EEP submissions and deciding next steps. Once an EEP has been submitted by an author and reviewed by an EEP editor, it is added to the agenda for the next review meeting.
+-   Faster than others. We're focusing on making SubQuery faster than other solutions with advanced indexing caches and precomputed indices saving developers time, our solution is fast to set-up, fast to manage, and fast to index. 
 
-EEP review meetings will be held ad-hoc at the beginning of the EEP launch and a regular cadence will be determined at a later date. The agenda and meeting details, minutes, and recording will be shared publicly (similar to Ethereum's approach) and facilitated by the EEP editors. Anyone from the EOSIO community is welcome to participate and provide technical input and feedback on EEP submissions.
+-   More Flexible and Feature rich. SubQuery is a scaffold for building custom APIs and we provide additional features like GraphQL subscriptions, automated historical tracking, and more.
 
-## EEP Workflow
+-   Open. Customers have already extended our open source SDK to suit their own custom implementation.
 
-#### Before Submitting An EEP
-* Vet your idea, this will save you time. Ask the EOSIO community first if an idea is original to avoid wasting time on something that will be rejected based on prior research (searching the Internet does not always do the trick).
-* It also helps to make sure the idea is applicable to the entire community and not just the author. Just because an idea sounds good to the author does not mean it will work for most people in most areas where EOSIO is used.
+-   Universal. A universal infrastructure stack bringing communities together, developers now have a tool to search, sort, filter and query any data for their app across multiple blockchains.
 
-#### Examples of appropriate public forums to gauge interest around your EEP include:
-* [the EOS subreddit](https://www.reddit.com/r/eos/)
-* [the issues section of the EEPs repository](https://github.com/EOSIO/EEPs/issues)
-* [the EEP Telegram Channel](https://t.me/eos_enhancements_proposals)
-* the specific mainnet Telegram channels for each EOSIO chain
+Additionally, we are committed to running our managed hosted service over the long term. We have made huge investments into it and have many customers relying on it. This will provide an alternative to customers that are currently threatened by the [imminent sunsetting of the Graph's hosted service](https://thegraph.com/blog/sunsetting-hosted-service).
 
-In particular, the issues section of the EEPs repository is an excellent place to discuss your proposal with the community and start creating more formalized language around your EEP.
+Business Model
+--------------
 
-#### Submit an EEP
-1. Navigate to EOSIO’s official [EEP repository](https://github.com/EOSIO/EEPs)
-2. Use a pull request to update the status. Please include a link to where people should continue discussing your EEP.
-3. The EEP editors will process these requests. Once you’ve submitted your EEP, the EEP will have a ‘Submitted’ status.
+SubQuery's SDK is open source under the Apache 2.0 Licence. This SDK provides everything that you need to build and run an indexer for your dApp. You can see detailed instructions on how you can run [SubQuery locally in our documentation](https://academy.subquery.network/run_publish/run.html). The SubQuery Network will be open source under the same licence.
 
-#### EEP Review by an EEP Editor
-* An EEP editor will review the submitted EEP.
-* If the EEP is ready for review at the next EEP review meeting, the EEP editor will merge the EEP into the main repository.
-* If the editor has feedback, the EEP editor will correspond with the author until the EEP is ready for review.
-* Review new proposals at the EEP review meeting.
-* Once an EEP editor has approved an EEP submission into “Ready for Review” status, it is added to the agenda for the next EEP review meeting.
-* At the EEP review meeting, proposals are reviewed and discussed. There are four possible paths an EEP submission may take at the EEP review meeting:
-  * **Deferred:** the EEP submission presents a good idea for the future but cannot be accepted immediately; it will be revisited in the future
-  * **Accepted:** the EEP submission presents a good idea and can begin development immediately
-  * **Living:** the EEP requires regular updates and will be a living proposal
-  * **Archived:** either the author retracts their EEP submission or the EEP does not obtain the consensus it needs to be implemented
+The SubQuery managed service is a hosted environment that is closed source and run privately by SubQuery. It does not have any features that customers can't do themselves and runs the same open source versions of SubQuery SDK.
 
-#### EEP Next Steps
-Based on the next steps decided at the EEP review meeting:
-  * **If Deferred:** the EEP will be revisited at a future meeting
-  * **If Accepted:** the EEP is now available for development
-  * **If Living:** the EEP will be regularly reviewed to ensure accuracy
-  * **If Archived:** the justification will be recorded and the EEP will no longer be pursued
+Growth Strategy
+--------------
 
-#### EEP Happy Path
-1. An EOSIO community member submits an EEP proposal in the correct format and a "Submitted" status.
-2. An EEP editor reviews the submission, verifies it is ready for review, schedules time to discuss the EEP with EEP reviewers.
-3. EEP reviewers accept the EEP, making the proposal available for development. Any interested entity may begin the implementation of the EEP.
-4. Once an EEP has been developed, it will go under PR review.
-5. The EEP will pass the PR review and achieve a “Final” status.
+We build an advanced developer tool that makes a technically challenging process easy. As a result, the sole measure of our success is the number of developers and projects in EOSIO using our tool to index data for their dApp/service. We put a lot of effort into business development, developer education, and ecosystem outreach to achieve this.
 
-## EEP Statuses
-* **Draft** - the EEP is currently a work in progress and has not yet been submitted
-* **Submitted** - the final draft of the EEP has been subitted by the EEP author
-* **Ready for Review** - the EEP has been reviewed by an EEP editor and has been added to the agenda for the next EEP review meeting
-* **Accepted** - the EEP was analyzed and discussed by the EEP reviewers and has sufficient support for implementation
-* **Under Development** - the EEP is currently under developmnet
-* **Pending PR Review** -the EEP implementation is currently being reviewed for final acceptance
-* **Final** - the EEP has been successfully implemented and is now active
-* **Deferred** - the EEP has been shelved for future consideration
-* **Living** - this is similar to Final, but denotes an EEP which requires regular updates for accuracy (good for token/wallet standards)
-* **Archived** - the EEP is no longer under consideration (withdrawn by author, not enough support for the proposal, etc.)
+But if we don't build the best indexer tool, with unmatched features, faster performance, and higher reliability - then we will fail at onboarding developers to use our tool. That's why we focus on both BD and product development. Additionally, our Managed service solves a huge pain point with small teams that don't want to focus on reliability and uptime. We completely manage this critical infrastructure for many teams and we've become experts at it.
 
-## What belongs in a successful EEP?
-It is highly recommended that a single EEP contain a single key proposal or new idea. The more focused the EEP, the more successful it tends to be. A change to one client doesn’t require an EEP; a change that affects multiple clients, or defines a standard for multiple apps to use, does.
+About our Team
+--------------
 
-#### An EEP must meet certain minimum criteria:
-* It must be a clear and complete description of the proposed enhancement.
-* The enhancement must represent a net improvement.
-* The proposed implementation, if applicable, must be solid and must not complicate the protocol unduly.
-* The proposal must be chain-agnostic.
+Based in New Zealand, the inception of SubQuery occurred in February 2021 and since then the below core team of 4 has rapidly grown to more than 20 members spread across New Zealand, Singapore and Portugal. We're a high performing team, mostly comprised of software developers, devOps engineers, and business development staff with a track record of experience in extending our tooling to different layer 1 chains.
 
-#### Each EEP should have the following parts:
-**Preamble:** RFC 822 style headers containing metadata about the EEP, including the EEP number, a short descriptive title (limited to a maximum of 44 characters), and the author details. See below for details.
+Sam Zou - CEO (<https://www.linkedin.com/in/sam-zou-5b8169a/>)
 
-**Simple Summary:** “If you can’t explain it simply, you don’t understand it well enough.” Provide a simplified and layman-accessible explanation of the EEP.
+Entrepreneur, Investors and more than 20 years  of IT experience specialising in infrastructure and cloud service design
 
-**Abstract:** a short (~200 word) description of the technical issue being addressed.
+Ian He - CTO (<https://www.linkedin.com/in/yin-he-7a266345/>)
 
-**Motivation (*optional):** The motivation is critical for EEPs that want to change the EOSIO protocol. It should clearly explain why the existing protocol specification is inadequate to address the problem that the EEP solves. EEP submissions without sufficient motivation may be rejected outright.
+Blockchain Architect, Contributor of polkadot-js, Early adopter of substrate technology and won second place in the first polkadot hackathon.
 
-**Specification:** The technical specification should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations for any of the current EOSIO platforms (eos-go, eosjs).
+James Bayly - COO (<https://www.linkedin.com/in/james-bayly/>)
 
-**Rationale:** The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.
+Software engineer with experience creating and growing 3 startups over the past 5 years
 
-**Backwards Compatibility:** All EEPs that introduce backwards incompatibilities must include a section describing these incompatibilities and their severity. The EEP must explain how the author proposes to deal with these incompatibilities. EEP submissions without a sufficient backwards compatibility treatise may be rejected outright.
+Existing support and partnerships
+--------------
 
-**Test Cases:** Test cases for an implementation are mandatory for EEPs that are affecting consensus changes. Other EEPs can choose to include links to test cases if applicable.
+Read through <https://blog.subquery.network/> for all partnership announcements.
 
-**Implementations:** The implementations must be completed before any EEP is given status “Final”, but it need not be completed before the EEP is merged as draft. While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of “rough consensus and running code” is still useful when it comes to resolving many discussions of API details.
+Chains we support
 
-**Security Considerations:** Discuss the security implications/considerations relevant to the proposed change. Include information that might be important for security discussions, surface risks and can be used throughout the life cycle of the proposal.
+-   Ethereum
 
-**Intellectual Property:** All EEPs submissions must contain the following text: “I hereby agree that this EEP is subject to this [copyright waiver](https://creativecommons.org/publicdomain/zero/1.0/) and I certify that I have all necessary rights and permissions to make this submission and to agree to such waiver.”
+-   Polygon
 
-## EEP Types
-There are four types of EEPs:
-1. A **Standard EEP** describes any change that affects most or all EOSIO implementations, such as a change to the network protocol, a change in block or transaction validity rules, proposed application standards/conventions, or any change or addition that affects the interoperability of applications using EOSIO. 
+-   BNB Chain
 
-Furthermore Standard EEPs can be broken down into the following categories. Standards Track EEPs consist of three parts, a design document, implementation, and finally if warranted an update to the formal specification.
-  * **Core:** improvements requiring a consensus fork, as well as changes that are not necessarily consensus critical but may be relevant to Block Producer and EOSIO discussions 
-  * **Networking:** improvements around the p2p protocol
-  * **Interface:** includes improvements around client API specifications and standards, and also certain language-level standards like contract ABIs. For contract ABIs, it aligns with the [eosio.contracts repo](https://github.com/EOSIO/eosio.contracts) and discussion should primarily occur in that repository before an EEP is submitted to the EOSIO/EEPs repository
-  
-2. An **Informational EEP** describes an EOSIO design issue, or provides general guidelines or information to the EOSIO community, but does not propose a new feature. Informational EEPs do not necessarily represent EOSIO community consensus or a recommendation, so users and implementers are free to ignore Informational EEPs or follow their advice.
+-   Arbitrum
 
-3. A **Meta EEP** describes a process surrounding EOSIO or proposes a change to (or an event in) a process. Process EEPs are like Standard Track EEPs but apply to areas other than the EOSIO protocol itself. They may propose an implementation, but not to EOSIO's codebase; they often require community consensus; unlike Informational EEPs, they are more than recommendations, and users are typically not free to ignore them. Examples include procedures, guidelines, changes to the decision-making process, and changes to the tools or environment used in EOSIO development. Any meta-EEP is also considered a Process EEP.
+-   Optimism
 
-4. An **Archived EEP** desribes a previously submitted EEP submission that does not have a type or category from the list above.
+-   All Substrate and Polkadot/Kusama chains
 
-## EEP Formats and Templates
+-   Avalanche
 
-EEPs should be written in [markdown] format.
+-   Cosmos (both CosmWasm and Ethermint)
 
-Image files should be included in a subdirectory of the `assets` folder for that EEP as follows: `assets/eep-X` (for eep **X**). When linking to an image in the EEP, use relative links such as `../assets/eep-X/image.png`.
+-   Algorand
 
-#### EEP Header Preamble
-Each EEP must begin with an RFC 822 style header preamble, preceded and followed by three hyphens (`---`). The headers must appear in the following order. Headers marked with an asterisk are optional and are described below.
+-   Near
 
-All other headers are required.
+-   Flare
 
-`eep:` <EEP number> (this is determined by the EEP editor)
+Project Goals
+-------------
 
-`title:` <EEP title> (a high-level title of the EEP)
+This funding grant aims to help us  to build the next stage of our vision for SubQuery to become a multi-chain tool - SubQuery support encompassing EOSIO through full testing and implementation.
 
-`author:` <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s). Details are below.>
+-   The SubQuery SDK will be open-sourced / free for the EOSIO community and (test) network agnostic
 
-`* discussions-to:` <add a link>
+-   The SubQuery Hosted Service will be available for free for all customers on EOSIO (up to a basic level with paid enterprise level support for larger ones to cover infrastructure costs)
 
-`status:` <Draft | Submitted | Ready for Review | Accepted | Under Development | Pending PR Review | Final | Deferred | Living | Archived>
+-   The decentralised SubQuery Network will be fully compatible with EOSIO
 
-`* review-period-end:` YYYY-MM-DD
+-   We will deliver a considerable amount of developer documentation, tutorials, and example projects that will help developers in your ecosystem build
 
-`type:` <Standard | Informational | Meta | N/A>
+-   Our BD teams will reach out to multiple developers in your ecosystem make themselves available for any demos or workshops
 
-`* category:` <Core | Networking | Interface | N/A> 
+Milestones and Cost Projection
+-------------
 
-`created:` <date created on, in ISO 8601 (yyyy-mm-dd) format>
- 
-`* updated:` <date the eep was last updated on, in ISO 8601 (yyyy-mm-dd) format>
+|Deliverable|Time (FTE Days)|
+|:----|:----|
+|Create a new data source processor for EOSIO|12|
+|Define new manifest structure and update SubQuery CLI|10|
+|Import and manage EOSIO ABIs|7|
+|Create basic documentation for EOSIO support|5|
+|Create end to end developer tutorial (written and video)|7|
+|Project Management|10|
+|Milestone 1 Time|53|
 
-`* requires:` <EEP number(s)>
+|Resource|Quantity (Days)|Day Rate (USD)|Cost (USD)|
+|:----|:----|:----|:----|
+|Engineers|41|$900|$36,900|
+|Project Managers|10|$900|$9,000|
+|Milestone 1 Cost (USD)| | |$45,900|
 
-`* replaces:` <EEP number(s)>
+Intellectual Property
+-------------
 
-`* superseded-by:` <EEP number(s)>
+I hereby agree that this EEP is subject to this [copyright waiver](https://creativecommons.org/publicdomain/zero/1.0/) and I certify that I have all necessary rights and permissions to make this submission and to agree to such waiver.
 
-`* resolution:` <add a link>
-
-#### Author Header
- 
-The author header optionally lists the names, email addresses or usernames of the authors/owners of the EEP. Those who prefer anonymity may use a username only, or a first name and a username.
-
-The format of the author header value must be Random J. User &lt;address@dom.ain&gt;
-
-or Random J. User (@username) if the email address or GitHub username is included,
- 
-or Random J. User if the email address is not given.
-
-#### Additional Header & Template Guidelines
-
-The resolution header is required for Standards Track EEPs only. It contains a URL that should point to an email message or other web resource where the pronouncement about the EEP is made.
-
-While an EEP is a draft, a `discussions-to` header will indicate the mailing list or URL where the EEP is being discussed. As mentioned above, examples for places to discuss your EEP include:
- * an issue in this repo or in a fork of this repo
- * [EEPs Channel on Telegram](https://t.me/eos_enhancements_proposals)
- * [EOS Mainnet BPs Telegram Channel](https://t.me/joinchat/HbgyfEqlPd_HCo4R8EJsnw)
- * EOSIO mainnet Telegram channels
- * [Reddit r/eos](https://www.reddit.com/r/eos/)
- 
-No `discussions-to` header is necessary if the EEP is being discussed privately with the author.
-
-The `type` header specifies the type of EEP: Standards Track, Meta, or Informational. If the track is Standards please include the subcategory (core, networking, interface, or RFC). 
-
-The `category` header specifies the EEP's category. This is required for standards-track EEPs only.
-
-The `created` header records the date that the EEP was assigned a number. Both headers should be in yyyy-mm-dd format, e.g. 2001-08-14.
-
-EEPs may have a `requires` header, indicating the EEP numbers that this EEP depends on.
-
-EEPs may also have a `superseded-by` header indicating that an EEP has been rendered obsolete by a later document; the value is the number of the EEP that replaces the current document. The newer EEP must have a Replaces header containing the number of the EEP that it rendered obsolete.
-
-Headers that permit lists must separate elements with commas.
-
-#### Auxiliary Files
-
-EEPs may include auxiliary files such as diagrams. Such files must be named EEP-XXXX-Y.ext, where “XXXX” is the EEP number, “Y” is a serial number (starting at 1), and “ext” is replaced by the actual file extension (e.g. “png”).
-
-## Transferring EEP Ownership
-
-It occasionally becomes necessary to transfer ownership of EEPs to a new champion. In general, we’d like to retain the original author as a co-author of the transferred EEP, but that’s not always possible or may not be the preference of the original author. A good reason to transfer ownership is because the original author no longer has the time or interest in updating it or following through with the EEP process, or has fallen off the face of the net (i.e. is unreachable or isn’t responding to email). A bad reason to transfer ownership is because you don’t agree with the direction of the EEP. We try to build consensus around an EEP, but if that’s not possible, you can always submit a competing EEP.
-
-If you are interested in assuming ownership of an EEP, send a message asking to take over, addressed to both the original author and the EEP editor. If the original author doesn’t respond to email in a timely manner, the EEP editor will make a unilateral decision (it’s not like such decisions can’t be reversed).
-
-## History
-
-This document was derived heavily from [Ethereum’s EIP-1] written by Martin Becze, Hudson Jameson, and others, which was derived from [Bitcoin’s BIP-0001] written by Amir Taaki which in turn was derived from [Python’s PEP-0001]. In many places text was simply copied and modified. Although the PEP-0001 text was written by Barry Warsaw, Jeremy Hylton, and David Goodger, they are not responsible for its use in the EOSIO Enhancement Proposal process, and should not be bothered with technical questions specific to EOSIO or EEPs. Please direct all comments, questions, and feedback to the EEP editors.
-
-## Legal
-
-By participating in the EEP process you agree to terms set forth in this document. If you do not agree to these terms, you may not participate in the EEPs process.
-
-#### Conduct
-While participating in this process, please be respectful and constructive, so that participation in our project is a positive experience for everyone.
-
-##### Examples of behavior that contributes to creating a positive environment include:
-* Using welcoming and inclusive language
-* Being respectful of differing viewpoints and experiences
-* Gracefully accepting constructive criticism
-* Focusing on what is best for the community
-* Showing empathy towards other community members
-
-##### Examples of unacceptable behavior include:
-* The use of sexualized language or imagery and unwelcome sexual attention or advances
-* Trolling, insulting/derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others’ private information, such as a physical or electronic address, without explicit permission
-* Other conduct which could reasonably be considered inappropriate in a professional setting
-
-#### Confidentiality
-All EEPs, editor feedback on EEPs, and EEPs reivew meeting discussions or feedback on EEPs are considered non-confidential information and may be disclosed to third parties. This could lead to a third party developing an idea, concept, design or standard described in your EEP without your permission or involvement.
-
-#### Additional Requirements
-  
-##### By participating in the EEP process, you certify that:
-You are not, are not acting on behalf of another party that is, and no party with a beneficial interest in you is: subject to sanctions administered or enforced by any country or government or otherwise designated on any list of prohibited or restricted parties (including but not limited to the lists maintained by the United Nations Security Council, the U.S. Government, the European Union or its Member States, or other applicable government authority)(“Sanctions”); or
-organized or resident in a country or territory that is the subject of country-wide or territory-wide Sanctions.
-
-##### And you acknowledge and agree that:
- * All EEPs, editor feedback on EEPs and EEP review meeting discussions or written feedback on EEPs are subject to this [copyright waiver](https://creativecommons.org/publicdomain/zero/1.0/).
- * The EEP process does not create an obligation to consider, develop or implement any idea, design, concept or standard that you include in an EEP
-
-The EEP process, including but not limited to EEP editing and EEP reviewer feedback is provided without warranty, guarantee or undertaking of any kind, whether express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. 
-  
-In no event shall an EEP editor, an EEP reviewer or Bullish Global or its affiliates (“EEP Participants”) be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the EEP process and you waive any claim that you may have against such parties related to their participation in the EEP process 
-
-You will not make EEP materials available to any person or entity that is the subject of Sanctions or organized or resident in a country or territory that is the subject of country-wide or territory-wide Sanctions.  You will comply with all applicable import, re-import, sanctions, anti-boycott, export, and re-export control laws and regulations.  If this is not accurate or you do not agree, then you must immediately cease accessing the EEP materials and delete all copies thereof.
-
-Any reference to any third party or third-party product, resource or service is not an endorsement or recommendation by an EEP Participant. EEP Participants are not responsible for, and disclaim any and all responsibility and liability for, your use of or reliance on any of these resources.
-
-#### Forward Looking Statements
-
-When an EEP Participant makes statements expressing its vision, it does not guarantee anything, and all aspects of its vision are subject to change at any time and at such participant’s sole discretion, with or without notice. We call these “forward-looking statements”, which includes statements on an EEP Participant’s website and in other materials, such as statements regarding EOSIO’s development, expected performance, and future features, or business strategy, plans, prospects, developments and objectives. These statements are based on assumptions and are subject to risk, uncertainties and change at any time.
-
-EEP Participants operate in a rapidly changing environment and new risks emerge from time to time. Given these risks and uncertainties, you are cautioned not to rely on these forward-looking statements. Actual results, performance or events may differ materially from what is predicted in the forward-looking statements. Some of the factors that could cause actual results, performance or events to differ materially from the forward looking statements include, without limitation: technical feasibility and barriers; market trends and volatility; continued availability of capital, financing and personnel; product acceptance; the commercial success of any new products or technologies; competition; government regulation and laws; and general economic, market or business conditions.
-
-All statements are valid only as of the date of first posting and EEP Participants are not under and expressly disclaim any obligation to update or alter any statements, whether as a result of new information, subsequent events or otherwise. Nothing provided in the EEP process constitutes technological, financial, investment, legal or other advice, either in general or with regard to any particular situation or implementation. Please consult with experts in appropriate areas before implementing or utilizing any content, guidance or feedback received as part of the EEP process.
-Trademarks: EOSIO, EOS, the heptahedron and associated logos and related marks are Bullish Global’s trademarks.
-
-## Bibliography
-
-* [eosio.contracts](https://github.com/EOSIO/eosio.contracts)
-  
-* [the EOS subreddit](https://www.reddit.com/r/eos/)
-  
-* [EEP Telegram Channel](https://t.me/eos_enhancements_proposals)
-  
-* [pull request](https://github.com/eoscanada/EEPs/pulls)
-  
-* [the Issues section of this repository](https://github.com/eoscanada/EEPs/issues)
-  
-* [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-  
-* [Ethereum's EIP-1](https://github.com/ethereum/EIPs/)
-  
-* [Bitcoin's BIP-0001](https://github.com/bitcoin/bips)
-  
-* [Python's PEP-0001](https://www.python.org/dev/peps/)
+Link to Proposal:
+-------------
+[https://docs.google.com/document/d/1_3g6c4Jp3RHT13KknHk5Y-J8te5nJqwzVAgEowCaRzw/edit?usp=sharing](https://docs.google.com/document/d/1_3g6c4Jp3RHT13KknHk5Y-J8te5nJqwzVAgEowCaRzw/edit?usp=sharing)
